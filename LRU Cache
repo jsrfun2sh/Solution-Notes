@@ -1,1 +1,3 @@
+The cache will be of a fixed size.
+we need a queue of fixed size to find the least recently used page and a hashmap for lookup.
 
