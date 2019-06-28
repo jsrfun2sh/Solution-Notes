@@ -1,3 +1,8 @@
 The cache will be of a fixed size.
-we need a queue of fixed size to find the least recently used page and a hashmap for lookup.
-
+We need a queue of fixed size to find the least recently used page and a hashmap for lookup.
+Case 1> The page you are looking up is not present in the map
+        a) If the queue size is full, then delete the last element from queue and erase the element from hashmap too.
+           Now, add the latest page to the front of the queue and make an entry in the hashmap
+        b) Add the latest page to the front of the queue and make an entry in the hashmap
+        
+Case 2> If the page is present in the hashmap, Remove the element from the queue and add in the front of the list.
