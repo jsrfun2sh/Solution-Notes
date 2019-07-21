@@ -1,0 +1,26 @@
+Given a sum S and a number N.
+print all possible permutation of N numbers whose sum is equal to S.
+vector<int> v;
+void printvector(vector<int> v)
+{
+    for(auto it = v.begin(); it!=v.end(); it++)
+        cout<<*it<<" ";
+    cout<<endl;
+}
+int print(int sum, int N)
+{
+    if(N == 0)
+    {
+        if(sum == 0)
+        {
+            printvector(v);
+        }
+        return;
+    }
+    for(int i=0;i<N;i++)
+    {
+        v.push_back(i);
+        print(sum-i, N-1);
+        v.pop_back();
+    }
+}
