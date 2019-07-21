@@ -1,0 +1,10 @@
+//How to solve the sudoku problem.
+In sudoku we need to fill each row, column and grid(3x3) using numbers from 1 to 9.
+We can use backtracking to solve the sudoku problem.
+Steps:
+1. Find the location of grid which has not been assigned any value.If we don't find any element then the sudoku has been solved.
+2. The unfilled location can have any value from 1 to 9. Pick the number starting from 1 and check whether that number is 
+already in that row, column or 3x3 grid.
+If yes, then move to next index,otherwise assign the value to that node and call sudoku solver again.
+If any point the solution is not coming correct then we can backtrack and again mark that node as not assigned.
+In this way, we can fix it.
